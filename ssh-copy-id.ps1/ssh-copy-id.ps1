@@ -34,8 +34,6 @@ Function Copy-SSH {
         https://github.com/jason-dawnbreaktech
         Date: 09/22/2024
 
-    .LINK
-        ssh-copy-id man page
     #>
     [CmdletBinding()]
     Param (
