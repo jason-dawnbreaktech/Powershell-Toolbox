@@ -1,6 +1,6 @@
 ## New-RepoFolder.ps1
 
-This script creates a junction folder at $env:
+This script creates a junction folder at $env:SystemDrive called 'repos'
 
 ### How to use
 
