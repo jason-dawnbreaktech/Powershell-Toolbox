@@ -13,7 +13,7 @@ Function Copy-SSH {
         The username on the remote server to which the public key will be added.
 
     .PARAMETER PubKeyPath
-        The local path to the public key file. If not specified, the default path '~/.ssh/id_rsa.pub' is used.
+        The local path to the public key file. If not specified, the default path '~/.ssh/id_ed25519.pub' is used.
 
     .PARAMETER Port
         The port on which to connect to the remote server. The default is 22.
@@ -51,7 +51,7 @@ Function Copy-SSH {
             $Port = 22
         }
         if (-not ($PubKeyPath)) {
-            $PubKeyPath = "$env:USERPROFILE\.ssh\id_rsa.pub"
+            $PubKeyPath = "$env:USERPROFILE\.ssh\id_ed25519.pub"
             if (!(Test-Path -Path $PubKeyPath -ErrorAction Stop)) {
                 Return "No public key found at $PubKeyPath. Try running ssh-keygen and try again, or manually declare the path to your public key."
             } 
